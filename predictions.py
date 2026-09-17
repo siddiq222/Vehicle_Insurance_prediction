@@ -2,12 +2,19 @@ from module import *
 import joblib
 from tensorflow.keras.models import load_model
 
+import os
+
+
 
 model = load_model('final_ann_model.h5')
 scaler = joblib.load('Preprocessing_Techniques\scaler.pkl')
 region_freq = joblib.load('Preprocessing_Techniques\\region_freq.pkl')
 channel_freq = joblib.load('Preprocessing_Techniques\channel_freq.pkl')
 ohe = joblib.load('Preprocessing_Techniques\onehot_encoder.pkl')
+scaler = joblib.load(os.path.join('Preprocessing_Techniques', 'scaler.pkl'))
+region_freq = joblib.load(os.path.join('Preprocessing_Techniques', 'region_freq.pkl'))
+channel_freq = joblib.load(os.path.join('Preprocessing_Techniques', 'channel_freq.pkl'))
+ohe = joblib.load(os.path.join('Preprocessing_Techniques', 'onehot_encoder.pkl'))
 vehicle_age_map = {'< 1 Year': 0, '1-2 Year': 1, '> 2 Years': 2}
 ohe_cols = ['Gender', 'Vehicle_Damage']
 num_cols = ['Age', 'Annual_Premium', 'Vintage', 'Region_Code_freq', 'Policy_Sales_Channel_freq']
