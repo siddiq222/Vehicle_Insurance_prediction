@@ -7,10 +7,10 @@ import os
 
 
 model = load_model('final_ann_model.h5')
-scaler = joblib.load('Preprocessing_Techniques\scaler.pkl')
-region_freq = joblib.load('Preprocessing_Techniques\\region_freq.pkl')
-channel_freq = joblib.load('Preprocessing_Techniques\channel_freq.pkl')
-ohe = joblib.load('Preprocessing_Techniques\onehot_encoder.pkl')
+# scaler = joblib.load('Preprocessing_Techniques\scaler.pkl')
+# region_freq = joblib.load('Preprocessing_Techniques\\region_freq.pkl')
+# channel_freq = joblib.load('Preprocessing_Techniques\channel_freq.pkl')
+# ohe = joblib.load('Preprocessing_Techniques\onehot_encoder.pkl')
 scaler = joblib.load(os.path.join('Preprocessing_Techniques', 'scaler.pkl'))
 region_freq = joblib.load(os.path.join('Preprocessing_Techniques', 'region_freq.pkl'))
 channel_freq = joblib.load(os.path.join('Preprocessing_Techniques', 'channel_freq.pkl'))
